@@ -48,11 +48,12 @@
             <h4 class="ingresa">Ingresa:</h4>
             <div class="registro">
                 <label for="nameUser">Nombre de usuario:</label>
-                <input type= "text" name="nameUser" class="control" >
+                <input type= "text" name="nameUser" class="control" pattern="[a-z,A-Z,À-ÿ,\s,\S,\d,\-]{7,60}" required title="Debes ingresar un nombre de usuario, por ejemplo nerea_chanampe. No se aceptan caracteres especiales (@,*´+)">
             </div>
             <div class="registro">
                 <label for="password">Contraseña:</label>
-                <input type= "password" name="password" class="control" >
+                <input type= "password" name="password" class="control" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w\S{6,}" title="Requisitos mínimos: 6 caracteres, una mayúscula y una minúscula.
+                Puede usar caracteres especiales (*/.}{¿'=, etc..)." required >
             </div>
             <div class="botones-login">
                 <button type="submit" class="boton-login">Enviar</button>
